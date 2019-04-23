@@ -1,0 +1,31 @@
+{
+  "name": "akamai-sandbox-cloud-playground",
+  "version": "1.0.0",
+  "description": "Akamai sandbox playground for testing different Akamai functions against any hostname",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akhiljay/akamai-sandbox-cloud-playground.git"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "Akhil Jayaprakash",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/akhiljay/akamai-sandbox-cloud-playground/issues"
+  },
+  "homepage": "https://github.com/akhiljay/akamai-sandbox-cloud-playground#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "ps-tree": "^1.2.0",
+    "request": "^2.88.0",
+    "terminate": "^2.1.2",
+    "tree-kill": "^1.2.1"
+  }
+}

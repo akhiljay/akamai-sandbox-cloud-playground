@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Akamai Sandbox Playground</title>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <link rel="icon" type="image/vnd.microsoft.icon" href="/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/css/semantic.css">
+    <link href='/css/googlefonts.css' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="js/semantic.js"></script>
+ 
+     
+    <!--<script src="js/jquery.connections.js"></script>-->
+    
+    <style>
+      	connection {
+		border: 24px solid #b51c29;
+		border-radius: 31px;
+    }
+  
+    </style>
+    <script>
+        function signOut() {
+          var auth2 = gapi.auth2.getAuthInstance();
+          auth2.signOut().then(function () {
+            console.log('User signed out.');
+          });
+        }
+      </script>
+  </head>
+
+<body>
+    <div class="ui inverted vertical header segment">
+        <div class="ui container">
+            <div class="introduction">
+                <h1 class="ui inverted header">
+                  Akamai Sandbox Playground
+                  <div class="sub header">
+                      Ability to test different Akamai sandbox setups using your own domains
+                    </div>
+                </h1>
+              </div>
+        </div>
+      </div>
+<div class="ui container">
+  </br>
+
+    <!--header and Title comes here-->
+
+    <div class="article">
+
+    </div>
+    <!--divider comes here-->
+    <div class="ui divider"></div>
+
+    <!--first recipe-->
+    <div class="ui container">
+      <!--enter urls-->
+        <div class="ui raised link card" id="urls_selector">
+            <div class="content">
+              <div class="header">Enter the domain you wish to test via Akamai Sandbox</div>
+              <div class="meta">
+                <span class="category">Enter any domain you wish to use, as long as it's accessible, we will try to proxy it via the sandbox</span>
+              </div>
+              <div class="description">
+                <p><b>Domain Details</b></p>
+                <div class="ui fluid left labeled input">
+                    <div id="methoddrop" class="ui dropdown label">
+                        <div class="text">Select Sandbox</div>
+                        <i class="dropdown icon"></i>
+                        <div class="menu">
+                          <div class="item" data-value="get">Image Manager - Grayscale</div>
+                          <div class="item" data-value="post">Visitor Prioritization</div>
+                          <div class="item" data-value="delete">Resource Optimizer</div>
+                          <div class="item" data-value="put">EdgeWorkers</div>
+                          <div class="item" data-value="patch">Property Manager Changes</div>
+                        </div>
+                      </div>
+
+                      <input id="domain" type="text" placeholder="developer.akamai.com">
+                
+                  </div>
+                  <!--
+                  </br>
+                </br>
+                        <p><b>API Request headers</b></p>
+                        <span>Enter multiple headers and values separated by line breaks</span>
+                  </br>
+                        <div class="ui input" style="width:100%;">
+                            <input id="api-headers" type="text" placeholder="header-name1"> 
+                            <div class="ui form" style="width:50%;">
+                                <div class="field">
+                                  <textarea id="api-headers" placeholder="header name&#10;header name 2"></textarea>
+                                </div>
+                              </div>
+                              <div class="ui form" style="width:50%;">
+                                  <div class="field">
+                                    <textarea id="api-values" placeholder="header value&#10;header value 2"></textarea>
+                                  </div>
+                                </div>
+                          </div>
+
+
+                          </br>
+                          </br>
+                          <p><b>API Request Body</b></p>
+                          <span>Enter Request Body</span>
+                    </br>
+                    <div class="ui fluid input">
+                         <input id="api-headers" type="text" placeholder="header-name1">
+                        <div class="ui form" style="width:100%;">
+                            <div class="fluid field">
+                              <textarea id="postBody" placeholder="{'test':'rest'}"></textarea>
+                            </div>
+                          </div>
+                      </div>
+                    -->
+                    
+              </div>
+            </div>
+
+          </div>
+
+       <!--submit button-->
+        <div class="ui raised link card" id="submit_selector">
+                          <div class="content">
+                            <div class="center aligned header">
+                                <div class="ui buttons"  style="width:100%;">
+                                    <button class="ui positive button" id="startsand">Start</button>
+                                    <div class="or"></div>
+                                    <button id="stopsand" class="ui button">Stop</button>
+                                  </div>
+                            </div>
+  
+                          </div>
+            </div>
+    </div>
+    <!--divider comes here-->
+    <div class="ui divider"></div>
+       <!--API Response comes here-->
+       <div class="ui container">
+            <div class="ui raised link card" id="apiresponse">
+                <div class="content">
+                
+                      <div class="header">Sandbox Status</div>
+                      <div class="meta">
+                        <span class="category">Tells you whether the sandbox is actively running or not</span>
+                      </div>
+                      <div class="description">
+                          <div class="apiresponse-js"></div>
+                      </div>
+                      
+              
+
+                </div>
+           </div>
+    </div>
+</div>
+
+<div class="ui inverted vertical footer segment" style="position:absolute;bottom:0;width:100%">
+    <div class="ui container">
+      Akamai Sandbox Playground. All Rights Reserved.
+    </div>
+  </div>
+
+
+
+  </body>
+  <script type="text/javascript" src="js/script.js"></script>
+</html>
