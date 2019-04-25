@@ -89,7 +89,7 @@ var kill = function (pid, signal, callback) {
 //start the sandbox 
 var startSandbox = function(domainobj){
     console.log(domainobj);
-    let rawdata = fs.readFileSync('/Users/ajayapra/.akamai-cli/cache/sandbox-cli/sandboxes/akhil_node_sandbox/config.json');  
+    let rawdata = fs.readFileSync('/home/akhil/.akamai-cli/cache/sandbox-cli/sandboxes/2ndattempt-digital-ocean/config.json');  
     let student = JSON.parse(rawdata);  
     console.log(student);  
     //console.log(student.originMappings);
@@ -104,7 +104,7 @@ var startSandbox = function(domainobj){
     console.log(student.originMappings);
     let data = JSON.stringify(student); 
     console.log(data)
-    fs.writeFileSync('/Users/ajayapra/.akamai-cli/cache/sandbox-cli/sandboxes/akhil_node_sandbox/config.json', data); 
+    fs.writeFileSync('/home/akhil/.akamai-cli/cache/sandbox-cli/sandboxes/2ndattempt-digital-ocean/config.json', data); 
 
     ls = spawn('akamai', ['sandbox', 'start']);
     console.log('Spawned child pid: ' + ls.pid);
