@@ -9,7 +9,9 @@ const fs = require('fs');
 //initial setup
 const app = express();
 var ls = null;
-app.use(express.static('public'));
+app.use('/static', express.static(__dirname + '/public'));
+
+//app.use(express.static('public'));
 var domaininput = null;
 // create application/json parser
 var jsonParser = bodyParser.json()
